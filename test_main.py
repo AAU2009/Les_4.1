@@ -6,17 +6,6 @@ import random
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-
 def test_greeting():
     """
     Напишите программу, которая выводит на экран приветствие.
@@ -73,20 +62,10 @@ def test_random_list():
     Создайте список из 10 случайных чисел от 1 до 100 (включая обе границы) и отсортируйте его по возрастанию.
     """
     # TODO создайте список
+    l = []
+    for i in range(10):
+        l.append(random.randint(1, 100))
 
-    a1 = random.randint (1,100)
-    a2 = random.randint(1,100)
-    a3 = random.randint(1,100)
-    a4 = random.randint(1,100)
-    a5 = random.randint(1,100)
-    a6 = random.randint(1,100)
-    a7 = random.randint(1,100)
-    a8 = random.randint(1,100)
-    a9 = random.randint(1,100)
-    a10 = random.randint(1,100)
-    print (a1,a2,a3,a4,a5,a6,a7,a8,a9,a10)
-
-    l = [a1,a2,a3,a4,a5,a6,a7,a8,a9,a10]
     print(l)
     l.sort()
     print(l)
@@ -94,7 +73,6 @@ def test_random_list():
 
     assert len(l) == 10
     assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
-
 
 def test_unique_elements():
     """
